@@ -4,6 +4,9 @@
 <div>
   <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>
 </div>
+<div>
+  <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>
+</div>
 <form action = "/attack">
   <input type= "submit" value = "Attack">
 </form>
