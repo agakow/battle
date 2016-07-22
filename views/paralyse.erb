@@ -1,7 +1,7 @@
 
 <%= @game.players.first.name %> paralysed <%= @game.players.last.name %>
 
-<% if @game.current_player == @game.player_1 %>
+<% if @game.players.first == @game.player_1 %>
 
 <a href="/play"> Back to BATTLE!! </a>
 

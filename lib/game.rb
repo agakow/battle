@@ -2,7 +2,7 @@ require_relative 'player'
 
 class Game
 
-attr_reader :player_1, :player_2, :players, :current_player, :last_attack
+attr_reader :player_1, :player_2, :players, :last_attack
 
     def self.create(player_1, player_2)
       @game = Game.new(player_1, player_2)
@@ -16,6 +16,7 @@ attr_reader :player_1, :player_2, :players, :current_player, :last_attack
       @player_1 = player_1
       @player_2 = player_2
       @players = [player_1, player_2]
+      # @current_player = player_1
     end
 
 
@@ -33,10 +34,13 @@ attr_reader :player_1, :player_2, :players, :current_player, :last_attack
     switch
   end
 
- def switch
+  def switch
      @players.rotate!
-     @current_player = @players.first
-   end
+  end
+
+  # def current_player
+  #    @current_player = @players.first
+  # end
 
   def game_over?
     @players.last.hp <= 0
