@@ -5,14 +5,9 @@ class Player
   def initialize(name, hit_points = DEFAULT_HIT_POINTS)
     @name = name
     @hit_points = hit_points
-    @loser = false
   end
 
   def receive_damage
-    @hit_points -= rand(10)
-  end
-
-  def lost?
-    @lost = @hit_points <= 0
+    @hit_points -= rand(15)
   end
 end

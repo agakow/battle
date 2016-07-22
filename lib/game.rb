@@ -1,6 +1,6 @@
 class Game
 
-  attr_reader :player_1, :player_2, :players
+  attr_reader :player_1, :player_2, :players, :current_player
 
   def initialize(player_1_name, player_2_name)
     @player_1 = Player.new(player_1_name)
@@ -12,6 +12,10 @@ class Game
     @players.last
   end
 
+  # def computer?
+  #   @player_2.name == 'computer'
+  # end
+
   def attack
     @players.first.receive_damage
   end
@@ -20,8 +24,8 @@ class Game
     @players.reverse!
   end
 
-  def loser
-    true if @players.first.lost?
+  def loser?
+    @players.first.hit_points <= 0
   end
 
   def self.instance

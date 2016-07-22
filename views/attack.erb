@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="center">
-    <p><%= @game.players.first.name %> attacked <%= @game.players.last.name %></p>
-
-    <a class="btn btn-primary" href="/play">OK</a>
+  <div class="container text-center">
+    <div class="names">
+      <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
+    </div>
+    <div>
+      <p><%= @game.players.first.name %> attacked <%= @game.players.last.name %></p>
+      <a class="btn btn-primary" href="/play">OK</a>
   </div>
 </body>
-</html>
+</html> -->

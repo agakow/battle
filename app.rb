@@ -5,6 +5,10 @@ require './lib/game'
 class Battle < Sinatra::Base
   enable :sessions
 
+  before do
+    @game = Game.instance
+  end
+
   get '/' do
     erb :index
   end
@@ -15,22 +19,17 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @game = Game.instance
     erb :play
   end
 
-  get '/attack' do
-    @game = Game.instance
+  post '/attack' do
     @game.attack
-    if @game.loser
-      redirect '/loser'
-    end
+    redirect '/loser' if @game.loser?
     @game.switch_turn
-    erb :attack
+    redirect '/play'
   end
 
   get '/loser' do
-    @game = Game.instance
     erb :loser
   end
 
