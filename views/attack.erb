@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,14 +14,8 @@
       <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
     </div>
     <div>
-      <p><%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP</p>
-      <p><%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP</p>
-        <form action = "/attack" method='post'>
-          <input type= "submit" value = "Attack">
-        </form>
-      <% if @game.player_2.hit_points < Player::DEFAULT_HIT_POINTS %>
-        <p><%= @game.players.first.name %> attacked <%= @game.players.last.name %></p>
-      <% end %>
+      <p><%= @game.players.first.name %> attacked <%= @game.players.last.name %></p>
+      <a class="btn btn-primary" href="/play">OK</a>
   </div>
 </body>
-</html>
+</html> -->

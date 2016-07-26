@@ -1,0 +1,41 @@
+body {
+  color: #090707;
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  color: #30A9DE;
+  font-family: 'Press Start 2P', cursive;
+  margin: 50px 0;
+}
+label {
+  color: #E53A40;
+}
+.btn-primary {
+  background-color: #30A9DE;
+  border-color: #30A9DE;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #278DB9;
+  border-color: #278DB9;
+}
+.names {
+  color: #30A9DE;
+  font-size: 24px;
+  font-family: 'Press Start 2P', cursive;
+  margin: 30px 0;
+}
+
+.center p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

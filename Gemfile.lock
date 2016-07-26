@@ -47,8 +47,11 @@ DEPENDENCIES
   rspec-sinatra
   sinatra
 
+<<<<<<< HEAD
 RUBY VERSION
    ruby 2.3.0p0
 
+=======
+>>>>>>> day-4
 BUNDLED WITH
    1.12.5
